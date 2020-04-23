@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food Express</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BootStrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome CDN-->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&display=swap" rel="stylesheet">
+
+    <!-- static files -->
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base_css.css' %}">
+
+
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark fixed-top">
+  <a class="navbar-brand" href="{% url 'index' %}"><i class="fa fa-cutlery" aria-hidden="true" style="font-size:24px"></i>&nbsp;Food Express</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'index' %}"><i class="fa p-1">&#xf015;</i>&nbsp;Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'my_restaurant_view' %}"><i class="fa p-1">&#xf118;&nbsp;</i>Restaurant Menu</a>
+    </li>
+  </ul>
+
+    <ul class="navbar-nav  float-sm-right ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa p-1">&#xf118;&nbsp;</i>&nbsp;Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'register_restaurant' %}"><i class="fa p-1">&#xf2bb;&nbsp;</i>Register</a>
+    </li>
+        <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa p-1">&#xf0b1;&nbsp;</i>Business</a>
+    </li>
+  </ul>
+
+
+
+
+</nav>
+<div class="container-fluid">
+
+
+{% block body %}
+
+    Add your custom body here.
+
+
+{% endblock %}
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,64 @@
+{% extends "restaurant/base.html" %}
+{% block body %}
+    <div class="searchBar justify-content-center">
+
+    <h1 class="headingFont mt-5 pt-5 foodExpressHeading">Welcome to Food Express</h1>
+    <form class="form-inline foodExpressSearch">
+        <input class="form-control mr-sm-2" size="70" type="text" placeholder="Search for your favourite food">
+        <button class="btn btn-success" type="submit" ><i class="fa">&#xf002;</i>&nbsp;Search</button>
+    </form>
+
+</div>
+<div class="container pt-5 mt-3">
+
+<div>
+  <div class="row p-2 m-4 gridGreen">
+    <div class="col-sm-4">
+      <h3 class="font1">Food Item</h3><br>
+    </div>
+    <div class="col-sm-1">
+      <b><i class="fa my-3">&#xf156;</i>Food Price</b>
+    </div>
+    <div class="col-sm-3 ">
+      <h3>Restaurant Name</h3>
+    </div>
+    <div class="col-sm-2 ">
+      <button class="ml-2 btn btn-sm btn-success">Order</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-sm btn-success mr-2">Menu</button>
+    </div>
+
+  </div>
+</div>
+<div>
+  <div class="row p-2 m-4 gridRed">
+    <div class="col-sm-4">
+      <h3 class="font1">Food Item</h3><br>
+    </div>
+    <div class="col-sm-1">
+      <b><i class="fa my-3">&#xf156;</i>Food Price</b>
+    </div>
+    <div class="col-sm-3 ">
+      <h3>Restaurant Name</h3>
+    </div>
+    <div class="col-sm-2 ">
+      <button class="ml-2 btn btn-sm btn-danger">Order</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-sm btn-danger mr-2">Menu</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  </div>
+{% endblock %}
+
+
+
+
+
