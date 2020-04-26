@@ -42,17 +42,31 @@
     </li>
   </ul>
 
-    <ul class="navbar-nav  float-sm-right ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fa p-1">&#xf118;&nbsp;</i>&nbsp;Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'register_restaurant' %}"><i class="fa p-1">&#xf2bb;&nbsp;</i>Register</a>
-    </li>
+    {% if user.is_authenticated %}
+
+        <ul class="navbar-nav  float-sm-right ml-auto">
         <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fa p-1">&#xf0b1;&nbsp;</i>Business</a>
-    </li>
-  </ul>
+          <a class="nav-link" href="#"><i class="fa p-1">&#xf118;&nbsp;</i>&nbsp;View Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}"><i class="fa p-1">&#xf118;&nbsp;</i>&nbsp;Logout</a>
+        </li>
+      </ul>
+
+        {% else  %}
+
+        <ul class="navbar-nav  float-sm-right ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}"><i class="fa p-1">&#xf118;&nbsp;</i>&nbsp;Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'register_customer' %}"><i class="fa p-1">&#xf2bb;&nbsp;</i>Register</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="{% url 'register_restaurant' %}"><i class="fa p-1">&#xf0b1;&nbsp;</i>Business</a>
+        </li>
+      </ul>
+    {% endif %}
 
 
 

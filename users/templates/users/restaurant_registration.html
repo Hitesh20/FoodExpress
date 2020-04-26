@@ -1,6 +1,9 @@
 {% extends 'restaurant/base.html' %}
 {% load crispy_forms_tags %}
 
+
+{% include 'users/messages.html' %}
+
 {% block body %}
     <div class="container">
         <form method="POST">
@@ -13,6 +16,7 @@
                 <button class="btn btn-success" type="submit">Sign Up</button>
             </div>
         </form>
+
         <div class="border-top pt-3">
             <small class="text-muted">
 {#                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>#}

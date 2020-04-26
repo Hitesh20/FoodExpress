@@ -25,7 +25,8 @@ from restaurant.views import index_view
 urlpatterns = [
     path('', index_view, name='index'),
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls')),
+    path('food_express/', include('restaurant.urls')),
+    path('authenticate/', include('users.urls')),
 
 ]
 
